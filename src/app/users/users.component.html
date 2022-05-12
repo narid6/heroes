@@ -1,0 +1,29 @@
+<div class="container mb-4 mt-4">
+    <h1 class="text-center text-white mb-4"> Usuarios Registrados</h1>
+    <div class="row mt-4">
+        <div class="col-12">
+            <table class="table table-striped table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Fecha de Nacimiento</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let u of users, let i = index">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{u.nombre}}</td>
+                    <td>{{u.sexo}}</td>
+                    <td>{{u.correo}}</td>
+                    <td>{{u.fecha}}</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+<br><br><br>

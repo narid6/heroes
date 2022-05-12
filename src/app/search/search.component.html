@@ -1,0 +1,12 @@
+<div class="row animated fadeIn fast fila-no"  *ngIf="indice == -1">
+    <div class="col-md-12">
+        <div class="alert alert-danger" role="alert">
+            <h1>No existen resultados de  {{nombreh}} :(</h1>
+            {{regresar()}}
+          
+        </div>
+    </div>
+    
+</div>
+
+<app-unheroe *ngIf="indice != -1" [heroe]='miheroe'  ></app-unheroe>

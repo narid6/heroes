@@ -1,0 +1,38 @@
+<div class="jumbotron" id="home">
+    <h1 class="display-4">Los mejores comics</h1>
+    <p class="lead">Tenemos las mejores historias en nuestro repertorio :D</p>
+    <hr class="my-4">
+    <p>Ven y descubre un mundo diferente</p>
+    <a id="subsc" class="btn btn-outline-danger btn-lg" (click)="modal=true" role="button">Subscribirme</a>
+  </div>
+  <div id="modal-registro" *ngIf="modal">
+     <a id="close-modal" (click)="modal=false">Cerrar</a>
+     <div class="container">
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" id="nombre" placeholder="Nombre" required [ngModel]="nombre" #nombre>
+        </div>
+        
+        <div class="form-group">
+          <select class="form-control" #sexo [ngModel]="sexo" >
+            <option value="Hombre">Hombre</option>
+            <option value="Mujer">Mujer</option>
+            <option value="X">No especificado</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" id="correo" placeholder="Correo Electrónico"  required #email [ngModel]="email"> 
+        </div>
+        <div class="form-group">
+          <input type="date" class="form-control" id="fecha" placeholder="Fecha de Nacimiento" required #fecha [ngModel]="fecha">
+        </div>
+        <div class="form-group">
+          <button type="submit" (click)="darAlta(nombre.value,sexo.value,email.value,fecha.value)" class="btn btn-outline-primary">Registrarme</button>
+        </div>
+      </form>
+     </div>
+  </div>
+    <div *ngIf="alert" class="alert alert-primary" role="alert">
+        Datos registrados :D
+    </div>
+  <br><br><br><br>

@@ -1,0 +1,9 @@
+@media screen and (max-width:992px) {
+    .navbar-nav li a{
+        text-align: center;
+    }
+    .form-inline{
+        justify-content: center;
+        flex-wrap: nowrap !important;
+    }
+}

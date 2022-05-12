@@ -1,0 +1,8 @@
+th,tr,td{
+    color: white;
+}
+table,tr{
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
